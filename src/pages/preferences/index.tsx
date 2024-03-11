@@ -15,8 +15,10 @@ import { searchArticles } from "../../context/articles/actions";
 import { searchSports } from "../../context/sports/actions";
 import { searchTeams } from "../../context/teams/actions";
 import { ThemeContext } from "../../context/theme";
+import { useTranslation } from "react-i18next";
 
 const Preferences = () => {
+    const { t } = useTranslation();
     const { theme } = useContext(ThemeContext); 
     const [userPreferences, setUserPreferences] = useState<UserPreferences>({
         sports: [],
@@ -194,22 +196,22 @@ const Preferences = () => {
                                             as="h3"
                                             className="text-2xl font-bold leading-6 text-black mb-2 dark:text-white"
                                         >
-                                            Preferences
+                                            {t("Preferences")}
                                         </Dialog.Title>
                                         <button
                                             onClick={patchPreferences}
                                             className="rounded-md px-2 py-1 text-black border border-black flex items-center gap-1 dark:bg-black dark:text-neutral-100 dark:border dark:border-white select-none"
                                         >
                                             <FunnelIcon className="h-4 w-4" />
-                                            <span className="font-semibold">Apply</span>
+                                            <span className="font-semibold">{t("Apply")}</span>
                                         </button>
                                     </div>
-                                    <p className="mb-4 text-sm text-black">
-                                        Select your favourite sports and teams.
+                                    <p className="mb-4 text-sm text-black dark:text-white">
+                                        {t("Select your favourite sports and teams.")}
                                     </p>
                                     <div className="bg-slate-300 -m-6 p-6 text-black dark:bg-black dark:text-white">
                                         <p className="font-medium text-lg mb-1">
-                                            Select your favorite sports
+                                            {t("Select your favorite sports")}
                                         </p>
                                         <div className="flex items-center gap-2 flex-wrap mb-3">
                                             {sports.map((sport: Sport) =>
@@ -219,7 +221,7 @@ const Preferences = () => {
                                                         key={sport.id}
                                                         className="flex-shrink-0 cursor-pointer flex items-center gap-1 bg-black rounded-lg px-2 py-1 text-white text-sm dark:bg-white dark:text-neutral-700 mb-3 select-none"
                                                     >
-                                                        <span>{sport.name}</span>
+                                                        <span>{t(sport.name)}</span>
                                                     </div>
                                                 ) : (
                                                     <div
@@ -227,13 +229,13 @@ const Preferences = () => {
                                                         key={sport.id}
                                                         className="flex-shrink-0 cursor-pointer flex items-center gap-1 border border-black rounded-lg px-2 py-1 text-neutral-700 text-sm dark:text-white dark:border-white mb-3 select-none"
                                                     >
-                                                        <span>{sport.name}</span>
+                                                        <span>{t(sport.name)}</span>
                                                     </div>
                                                 )
                                             )}
                                         </div>
                                         <p className="font-medium text-lg mb-1">
-                                            Select your favorite teams
+                                            {t("Select your favorite teams")}
                                         </p>
                                         <div className="flex items-center gap-2 flex-wrap mb-2">
                                             {teams
@@ -248,7 +250,7 @@ const Preferences = () => {
                                                             key={team.id}
                                                             className="flex-shrink-0 cursor-pointer flex items-center gap-1 bg-black rounded-lg px-2 py-1 text-white text-sm dark:bg-white dark:text-neutral-700 mb-3 select-none"
                                                         >
-                                                            <span>{team.name}</span>
+                                                            <span>{t(team.name)}</span>
                                                         </div>
                                                     ) : (
                                                         <div
@@ -256,7 +258,7 @@ const Preferences = () => {
                                                             key={team.id}
                                                             className="flex-shrink-0 cursor-pointer flex items-center gap-1 border border-black rounded-lg px-2 py-1 text-neutral-700 text-sm dark:text-white dark:border-white mb-3 select-none"
                                                         >
-                                                            <span>{team.name}</span>
+                                                            <span>{t(team.name)}</span>
                                                         </div>
                                                     )
                                                 )}

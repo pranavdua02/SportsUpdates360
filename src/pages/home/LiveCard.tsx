@@ -5,8 +5,10 @@ import { API_ENDPOINT } from "../../config/constants";
 import { Link } from "react-router-dom";
 import { CalendarDaysIcon, MapPinIcon } from "@heroicons/react/20/solid";
 import { ArrowPathIcon } from "@heroicons/react/24/outline";
+import { useTranslation } from "react-i18next";
 
 const LiveCard = ({ matchID }: { matchID: number }) => {
+    const { t } = useTranslation();
     const [searchScores, setSearchScores] = useState(false);
     const [match, setMatch] = useState<MatchDetails>();
 
@@ -31,12 +33,12 @@ const LiveCard = ({ matchID }: { matchID: number }) => {
         >
             <Link to={`/match/${match.id}`}>
                 <div className="flex justify-between items-center mb-3 gap-6">
-                    <p className="text-sm dark:text-neutral-300">{match.sportName}</p>
+                    <p className="text-sm dark:text-neutral-300">{ t(match.sportName) }</p>
                     {match.isRunning ? (
                         <div className="flex items-center gap-1">
                             <span className="p-1 rounded-full bg-slate-600 animate-pulse dark:bg-white" />
                             <p className="text-slate-600 text-sm dark:text-neutral-300">
-                                Live now
+                                { t("Live now") }
                             </p>
                         </div>
                     ) : (
@@ -54,7 +56,7 @@ const LiveCard = ({ matchID }: { matchID: number }) => {
                                 }`}
                         >
                             <span className="font-semibold">
-                                {match?.teams[0].name}:{"  "}
+                                { t(match?.teams[0].name) }:{"  "}
                             </span>
                             {match?.score[match?.teams[0].name]}
                         </div>
@@ -67,7 +69,7 @@ const LiveCard = ({ matchID }: { matchID: number }) => {
                                 }`}
                         >
                             <span className="font-semibold">
-                                {match?.teams[1].name}:{"  "}
+                                { t(match?.teams[1].name) }:{"  "}
                             </span>
                             {match?.score[match?.teams[1].name]}
                         </div>

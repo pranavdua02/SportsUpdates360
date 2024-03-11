@@ -1,6 +1,7 @@
 import { RouterProvider } from 'react-router-dom'
 import './App.css'
 import router from './routes'
+import "./i18n";
 import { ThemeContext } from './context/theme'
 import { useContext } from "react";
 import { MatchesProvider } from './context/matches/context';

@@ -4,8 +4,10 @@ import { useMatchState } from "../../context/matches/context"
 import { Match } from "../../types/types";
 import { Link } from "react-router-dom";
 import LiveCard from "./LiveCard";
+import { useTranslation } from "react-i18next";
 
 const LiveSports = () => {
+    const { t } = useTranslation();
     const state: any = useMatchState();
     const { matches, isLoading, isError, errMsg } = state;
     const matchPreview: Match[] = matches ? matches.slice(0, matches.length > 5 ? 5 : matches.length) : [];
@@ -13,7 +15,7 @@ const LiveSports = () => {
 
     return (
         <div className="scroll-bar">
-            <p className="font-bold text-2xl mb-4 text-black dark:text-white px-2">Live Sports</p>
+            <p className="font-bold text-2xl mb-4 text-black dark:text-white px-2">{ t("Live Sports") }</p>
             {isError && <p className="text-red-500">{errMsg}</p>}
             <div className="flex overflow-x-auto gap-2 pb-1 rounded-l-md px-2">
                 {isLoading &&
@@ -35,7 +37,7 @@ const LiveSports = () => {
                         className="flex-shrink-0 bg-white p-3 rounded-md text-black dark:bg-black dark:text-white border dark:border-white"
                     >
                         <div className="flex justify-between items-center mb-3 gap-6">
-                            <p className="text-sm">{match.sportName}</p>
+                                <p className="text-sm">{t(match.sportName)}</p>
                             {match.isRunning ? (
                                 <div className="flex items-center gap-1">
                                     <span className="p-1 rounded-full bg-green-700 animate-pulse" />

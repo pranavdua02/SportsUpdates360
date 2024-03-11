@@ -7,8 +7,10 @@ import { Article, Sport, Teams } from "../../types/types";
 import { useSportState } from "../../context/sports/context";
 import { useState } from "react";
 import { useTeamState } from "../../context/teams/context";
+import { useTranslation } from "react-i18next";
 
 const LiveNews = () => {
+    const { t } = useTranslation();
     const articleState: any = useArticleState();
     const sportState: any = useSportState();
     const teamState: any = useTeamState();
@@ -59,26 +61,26 @@ const LiveNews = () => {
 
     return (
         <div>
-            <p className="px-2 font-bold text-2xl mb-3">Live News</p>
+            <p className="px-2 font-bold text-2xl mb-3">{ t("Live News") }</p>
             <div className="mb-4">
-                <p className="text-md font-semibold mb-2 px-2">Filter by sport:</p>
+                <p className="text-md font-semibold mb-2 px-2">{ t("Filter by sport") }:</p>
                 <div className="flex items-center space-x-2 mb-3 px-2">
                     <select
                         className="px-4 py-2 border rounded-md bg-white text-gray-800 focus:outline-none focus:ring focus:border-blue-300 dark:text-white dark:bg-black"
                         value={selectedSportDropdown}
                         onChange={handleSportDropdownChange}
                     >
-                        <option value="All">All Sports</option>
+                        <option value="All">{ t("All Sports") }</option>
                         {sports.map((sport: Sport) => (
                             <option key={sport.id} value={sport.name}>
-                                {sport.name}
+                                { t(sport.name) }
                             </option>
                         ))}
                     </select>
                 </div>
             </div>
             <div className="mb-4 scroll-bar">
-                <p className="text-md font-semibold mb-2 px-2">Filter by team:</p>
+                <p className="text-md font-semibold mb-2 px-2">{ t("Filter by team") }:</p>
                 <div className="flex gap-2 items-center mb-3 overflow-x-auto px-2">
                     {team
                         .filter(
@@ -92,7 +94,7 @@ const LiveNews = () => {
                             key={team.id}     
                             className="flex-shrink-0 cursor-pointer flex items-center gap-1 bg-black rounded-lg px-2 py-1 text-white text-sm dark:bg-white dark:text-neutral-700 mb-3 select-none"
                         >
-                            <span>{team.name}</span>
+                            <span>{t(team.name)}</span>
                         </div>
                         ) : (
                             <div
@@ -100,7 +102,7 @@ const LiveNews = () => {
                                 key={team.id}                
                                 className="flex-shrink-0 cursor-pointer flex items-center gap-1 border border-black rounded-lg px-2 py-1 text-neutral-700 text-sm dark:text-white dark:border-white mb-3 select-none"
                             >
-                                <span>{team.name}</span>
+                                <span>{t(team.name)}</span>
                             </div>
                         )
                     )}
@@ -152,7 +154,7 @@ const LiveNews = () => {
                                 />
                                 <div className="flex flex-col justify-start p-6">
                                     <p className="text-xs text-neutral-500 dark:text-neutral-300">
-                                        {article.sport.name}
+                                        { t(article.sport.name) }
                                     </p>
                                     <h5 className="mt-2 text-xl font-semibold text-neutral-800 dark:text-white">
                                         {article.title}
@@ -163,7 +165,7 @@ const LiveNews = () => {
                                     <div className="text-xs text-neutral-500 mb-1 dark:text-neutral-300">
                                         {article.teams.map((team, id) => (
                                             <span key={id}>
-                                                <span>{team.name}</span>
+                                                <span>{t(team.name)}</span>
                                                 {article.teams.length !== id + 1 && " VS "}
                                             </span>
                                         ))}
@@ -176,7 +178,7 @@ const LiveNews = () => {
                         ))
                     ) : (
                         <div className="text-center mt-4 text-xl text-green-800 dark:text-neutral-300">
-                            <p>There are currently no updates available at the moment</p>
+                            <p>{ t("There are no updates available at the moment") }</p>
                         </div>
                     );
                 })()}
