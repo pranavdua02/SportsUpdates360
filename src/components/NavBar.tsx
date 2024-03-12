@@ -95,12 +95,12 @@ const NavBar = () => {
                                         <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none divide-y dark:bg-black dark:border dark:border-neutral-600 text-black dark:text-white dark:divide-neutral-600 divide-neutral-300">
                                             <div className="flex flex-col items-center justify-center my-2">
                                                 <Menu.Item>
-                                                    <button className={`${currLang === "en"} text-lg text-black dark:text-white hover:text-slate-600 `} onClick={() => changeLang("en")}>
+                                                    <button className={`${currLang === "en"} text-lg text-black dark:text-white hover:text-slate-600 dark:hover:text-slate-400`} onClick={() => changeLang("en")}>
                                                         English
                                                     </button>
                                                 </Menu.Item>
                                                 <Menu.Item>
-                                                    <button className={`${currLang === "es"} text-lg text-black dark:text-white hover:text-slate-600 `} onClick={() => changeLang("es")}>
+                                                    <button className={`${currLang === "es"} text-lg text-black dark:text-white hover:text-slate-600 dark:hover:text-slate-400`} onClick={() => changeLang("es")}>
                                                         Español
                                                     </button>
                                                 </Menu.Item>
@@ -166,7 +166,7 @@ const NavBar = () => {
                                                             to="/auth/signup"
                                                             className="text-black hover:text-slate-600 transition-colors dark:text-white"
                                                         >
-                                                            Sign up
+                                                            {t("Sign up")}
                                                         </Link>
                                                     </div>
                                                 </>

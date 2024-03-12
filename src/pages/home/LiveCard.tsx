@@ -22,6 +22,18 @@ const LiveCard = ({ matchID }: { matchID: number }) => {
             });
     };
 
+    const dateFormat = new Intl.DateTimeFormat(navigator.language, {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    });
+
+    const timeFormat = new Intl.DateTimeFormat(navigator.language, {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+    });
+
     useEffect(() => {
         searchMatch();
     }, [matchID]);
@@ -44,7 +56,10 @@ const LiveCard = ({ matchID }: { matchID: number }) => {
                     ) : (
                         <div className="flex items-center text-sm text-neutral-500 gap-1 dark:text-neutral-300">
                             <CalendarDaysIcon className="w-4 h-4" />
-                            <p>{new Date(match.endsAt).toDateString()}</p>
+                                {/* <p>{new Date(match.endsAt).toDateString()}</p>{", "}
+                                <p>{new Date(match.endsAt).toTimeString()}</p> */}
+                                {dateFormat.format(new Date(match.endsAt))}{", "}
+                                {timeFormat.format(new Date(match.endsAt))}
                         </div>
                     )}
                 </div>

@@ -6,8 +6,10 @@ import { API_ENDPOINT } from "../../config/constants";
 import { Transition, Dialog } from "@headlessui/react";
 import { CalendarDaysIcon } from "@heroicons/react/20/solid";
 import { ThemeContext } from "../../context/theme";
+import { useTranslation } from "react-i18next";
 
 const ArticleDetailsModel = () => {
+    const { t } = useTranslation();
     const {theme} = useContext(ThemeContext)
     const [article, setArticle] = useState<ArticleDetails | undefined>(undefined);
     const [isOpen, setIsOpen] = useState(false);
@@ -68,7 +70,7 @@ const ArticleDetailsModel = () => {
                                     </Dialog.Title>
                                     <p className="mb-4 mt-4 text-sm text-black dark:text-neutral-400">{article?.summary}</p>
                                     <div className="flex justify-between items-center mt-1 mb-3 gap-6">
-                                        <p className="text-sm text-black dark:text-neutral-400">{article?.sport.name}</p>
+                                        <p className="text-sm text-black dark:text-neutral-400">{t(article?.sport.name)}</p>
                                         <div className="flex items-center text-sm gap-1 text-black dark:text-white">
                                             <CalendarDaysIcon className="w-4 h-4" />
                                             <p>
@@ -77,7 +79,7 @@ const ArticleDetailsModel = () => {
                                         </div>
                                     </div>
                                     <div className="mt-4 bg-slate-300 -m-6 p-6 text-black dark:bg-black">
-                                        <p className="font-bold text-lg dark:text-white">Story</p>
+                                        <p className="font-bold text-lg dark:text-white">{t("Story")}</p>
                                         <div className="text-justify dark:text-neutral-400">
                                             <p>{article?.content}</p>
                                         </div>
