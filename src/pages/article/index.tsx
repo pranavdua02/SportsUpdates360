@@ -70,7 +70,7 @@ const ArticleDetailsModel = () => {
                                     </Dialog.Title>
                                     <p className="mb-4 mt-4 text-sm text-black dark:text-neutral-400">{article?.summary}</p>
                                     <div className="flex justify-between items-center mt-1 mb-3 gap-6">
-                                        <p className="text-sm text-black dark:text-neutral-400">{t(article?.sport.name)}</p>
+                                        <p className="text-sm text-black dark:text-neutral-400">{article?.sport.name}</p>
                                         <div className="flex items-center text-sm gap-1 text-black dark:text-white">
                                             <CalendarDaysIcon className="w-4 h-4" />
                                             <p>

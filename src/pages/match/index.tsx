@@ -72,7 +72,7 @@ const MatchDetailsModal = () => {
                                         {match?.name}
                                     </Dialog.Title>
                                     <div className="flex justify-between items-center mt-1 mb-3 gap-6 dark:text-neutral-200">
-                                        <p className="text-sm">{t(match?.sportName)}</p>
+                                        <p className="text-sm">{match?.sportName}</p>
                                         {match?.isRunning ? (
                                             <div className="flex items-center gap-1 animate-pulse text-slate-600 px-2 py-1 dark:text-white">
                                                 <span className="p-1 rounded-full bg-slate-600 dark:bg-white" />
@@ -105,7 +105,7 @@ const MatchDetailsModal = () => {
                                             <div className="flex items-center gap-2">
                                                 <div>
                                                     <span className="font-semibold">
-                                                        {t(match?.teams[0].name)}:{"  "}
+                                                        {match?.teams[0].name}:{"  "}
                                                     </span>
                                                     {match?.score[match?.teams[0].name]}
                                                 </div>
@@ -119,7 +119,7 @@ const MatchDetailsModal = () => {
                                             <div className="flex items-center gap-2">
                                                 <div>
                                                     <span className="font-semibold">
-                                                        {t(match?.teams[1].name)}:{"  "}
+                                                        {match?.teams[1].name}:{"  "}
                                                     </span>
                                                     {match?.score[match?.teams[1].name]}
                                                 </div>
