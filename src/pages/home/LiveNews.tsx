@@ -52,10 +52,11 @@ const LiveNews = () => {
     const changeTeam = (team: number) => {
         if (selectedTeams.includes(team)) {
             setSelectedTeams((selectedTeams) =>
-            selectedTeams.filter((selectedTeams) => selectedTeams !== team)
-        );
+                selectedTeams.filter((selectedTeams) => selectedTeams !== team)
+            );
         } else {
             setSelectedTeams((selectedTeams) => [...selectedTeams, team]);
+            // setSelectedTeams((selectedTeams) => [...selectedTeams].push(team));
         }
     };
 

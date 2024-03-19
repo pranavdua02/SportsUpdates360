@@ -43,7 +43,7 @@ const NavBar = () => {
                             <div className="flex items-center">
                                 <div className="flex-shrink-0">
                                     <span className="text-3xl font-bold dark:text-white">
-                                        { t("SportsUpdate360") }
+                                        {t("SportsUpdate360")}
                                     </span>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@ const NavBar = () => {
                                                             to="/auth/signout"
                                                             className="text-black hover:text-red-500 transition-colors dark:text-white"
                                                         >
-                                                            { t("Sign out") }
+                                                            {t("Sign out")}
                                                         </Link>
                                                     </div>
                                                     <div className="text-center py-2">
@@ -147,7 +147,7 @@ const NavBar = () => {
                                                             to="/resetPwd"
                                                             className="text-black hover:text-slate-600 transition-colors dark:text-white"
                                                         >
-                                                            { t("Reset Password") }
+                                                            {t("Reset Password")}
                                                         </Link>
                                                     </div>
                                                 </>
