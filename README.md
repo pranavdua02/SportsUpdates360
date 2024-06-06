@@ -1,9 +1,9 @@
-# SportsUpdate360
+# SportsUpdates360
 
-The **_SportsUpdate360_**  is a dynamic web application that keeps sports enthusiasts and casual users informed about the latest sports news and live scores across various sports. With the ability to personalize your dashboard and tailor your content, this app ensures you stay connected with your favorite sports and teams.
+The **_SportsUpdates360_**  is a dynamic web application that keeps sports enthusiasts and casual users informed about the latest sports news and live scores across various sports. With the ability to personalize your dashboard and tailor your content, this app ensures you stay connected with your favorite sports and teams.
 Built using React JS, TypeScript, TailwindCSS.
 
-🌐 **Live Application:** [SportsUpdate360 Live Application _CLICK HERE!_](https://sports-updates360.vercel.app/)
+🌐 **Live Application:** [SportsUpdates360 Live Application](https://sports-updates360.vercel.app/)
 
 ## Table of Contents
 
@@ -13,15 +13,15 @@ Built using React JS, TypeScript, TailwindCSS.
 
 ## Installation
 
-To set up and run the _SportsUpdate360_  application on your local machine, follow these steps:
+To set up and run the _SportsUpdates360_  application on your local machine, follow these steps:
 
 1. Clone the repository to your local machine. 🔍
    ```bash
-   git clone https://github.com/pranavdua02/SportsUpdate360.git
+   git clone https://github.com/pranavdua02/SportsUpdates360.git
    ```
 2. Change your working directory to the project folder. 📂
    ```bash
-   cd SportsUpdate360
+   cd SportsUpdates360
    ```
 3. Install project dependencies using npm. 📥
    ```bash
@@ -45,4 +45,4 @@ To set up and run the _SportsUpdate360_  application on your local machine, foll
 
 Stay updated with the latest sports news and live scores while customizing your dashboard to match your favorites. Get started with the SportsUpdate360 now! 🏀🏈⚽🎾
 
-<div align="right"><a href="#sportsupdate360">Back to top  ↑</a></div>
+<div align="right"><a href="#sportsupdates360">Back to top  ↑</a></div>
