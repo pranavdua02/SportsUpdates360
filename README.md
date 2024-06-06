@@ -3,9 +3,7 @@
 The **_SportsUpdate360_**  is a dynamic web application that keeps sports enthusiasts and casual users informed about the latest sports news and live scores across various sports. With the ability to personalize your dashboard and tailor your content, this app ensures you stay connected with your favorite sports and teams.
 Built using React JS, TypeScript, TailwindCSS.
 
-🌐 **Live Application:** [SportsUpdate360 Live Application _CLICK HERE!_](https://sports-update-360.netlify.app/)
-
-📹 **Video Demonstration:** [Watch Demo](https://www.loom.com/share/464b3f1d1e584e3282fc80bc9e04d4fc?sid=7f17e3d8-a152-44bb-8275-4518e400b12c)
+🌐 **Live Application:** [SportsUpdate360 Live Application _CLICK HERE!_](https://sports-updates360.vercel.app/)
 
 ## Table of Contents
 
@@ -19,7 +17,7 @@ To set up and run the _SportsUpdate360_  application on your local machine, foll
 
 1. Clone the repository to your local machine. 🔍
    ```bash
-   git clone https://github.com/Gopal-379/SportsUpdate360.git
+   git clone https://github.com/pranavdua02/SportsUpdate360.git
    ```
 2. Change your working directory to the project folder. 📂
    ```bash
